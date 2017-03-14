@@ -6,7 +6,10 @@ Dir["../*.rb"].each {|file| require file }
 class TestPlatey < MiniTest::Test 
 
   def setup
-
+    @player1 = Player.new("Jake")
   end
+
+ 
+
 
 end
