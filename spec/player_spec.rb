@@ -9,7 +9,9 @@ class TestPlatey < MiniTest::Test
     @player1 = Player.new("Jake")
   end
 
- 
+  def test_player_has_name
+    assert_equal("Jake", @player1.name)
+  end
 
 
 end
