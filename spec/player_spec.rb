@@ -23,4 +23,14 @@ class TestPlatey < MiniTest::Test
     assert_equal(Integer, roll.class)
   end
 
+  def test_player_move_position
+    @player1.move(2)
+    assert_equal(2, @player1.position)
+  end
+
+  def test_position_cannot_be_less_than_zero
+    @player1.move(-2)
+    assert_equal(0, @player1.position)
+  end
+
 end
