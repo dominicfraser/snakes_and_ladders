@@ -13,5 +13,8 @@ class TestPlatey < MiniTest::Test
     assert_equal("Jake", @player1.name)
   end
 
-
+  def test_player_starting_position_is_zero
+    assert_equal(0, @player1.position)
+  end
+  
 end
