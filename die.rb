@@ -7,7 +7,7 @@ class Die
   end
 
   def roll()
-    return rand(@no_sides)
+    return rand(1..@no_sides)
   end
 
 end
