@@ -3,12 +3,18 @@ require ("minitest/autorun")
 require ("minitest/rg")
 require_relative "../player"
 require_relative "../die"
+require_relative "../board"
+require_relative "../ladder"
+
 
 class TestPlayer < MiniTest::Test 
 
   def setup
     @player1 = Player.new("Jake")
+    @board1 = Board.new(100)
     @die1 = Die.new(6)
+    @ladder1 = Ladder.new(4, 14)
+    @board1.add_ladder(@ladder1)
   end
 
   def test_player_has_name
@@ -37,6 +43,12 @@ class TestPlayer < MiniTest::Test
   def test_move_again
     @player1.move_again(14)
     assert_equal(14, @player1.position)
+  end
+
+  def test_is_position_in_ladders
+    @player1.move(4)
+
+    assert_equal(true, @player1.on_ladder?(@board1))
   end
 
 end

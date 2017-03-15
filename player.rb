@@ -21,5 +21,13 @@ class Player
     @position = finish
   end
 
+  def on_ladder?(board)
+    board.ladders_locations.include?(@position) 
+  end
+
 
 end
+
+
+# elsif @board.ladders_locations.include?(@current_player.position)
+# #         @current_player.move_again(@board.ladders_locations[@current_player.position])
