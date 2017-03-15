@@ -1,6 +1,6 @@
 class GameEngine
 
-  attr_reader :players, :board, :die 
+  attr_reader :players, :board, :die, :game_status 
   attr_accessor :current_player
 
   def initialize(board, die)
@@ -8,6 +8,7 @@ class GameEngine
     @board = board
     @die = die
     @current_player = ""
+    @game_status = "not won"
   end
 
   def greet()
@@ -36,9 +37,21 @@ class GameEngine
     end
   end
 
-
-
-
+  def turn()
+    while @game_status != "won"
+      #current_postion = @current_player.position
+      move(@current_player.player_roll)
+      if won?(@current_player.position) == true
+        @game_status = "won"
+      elsif @board.ladders_locations.include?(@current_player.position)
+        @current_player.move_again(@board.ladders_locations[@current_player.position])
+      elsif #the same for snakes
+      else
+        @current_player.position = @current_player.position 
+      end   
+    end
+    switch_players()
+  end
 end
 
 

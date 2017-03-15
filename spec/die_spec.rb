@@ -3,7 +3,7 @@ require ("minitest/rg")
 require_relative "../die"
 
 
-class TestDice < MiniTest::Test 
+class TestDie < MiniTest::Test 
 
   def setup
     @dice = Die.new(6)
@@ -13,8 +13,8 @@ class TestDice < MiniTest::Test
     assert_equal(Integer, @dice.roll.class)
   end
 
-  def test_number_smaller_than_sides
-    ###? best way 
+  def test_number_always_smaller_than_sides
+    ###? definitive way to test all possible results
   end
 
 end
