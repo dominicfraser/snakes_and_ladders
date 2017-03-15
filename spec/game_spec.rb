@@ -44,6 +44,15 @@ class TestGameEngine < MiniTest::Test
     assert_equal(@player2, @game1.current_player)
   end
 
+  def test_switch_from_last_player
+    @game1.current_player = @player2
 
+    @game1.populate_with_player(@player1)
+    @game1.populate_with_player(@player2)
+
+    @game1.switch_players
+
+    assert_equal(@player1, @game1.current_player)
+  end
 
 end

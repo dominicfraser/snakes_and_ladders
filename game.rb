@@ -28,7 +28,7 @@ class GameEngine
 
   def switch_players()
     current_player_index = @players.index(@current_player)
-    if current_player_index == @players.length
+    if current_player_index == @players.length - 1
       @current_player = @players[0]
     else
       new_player_index = current_player_index + 1
@@ -37,12 +37,9 @@ class GameEngine
   end
 
 
+
+
 end
-
-
-# turn 
-
-# switch players
 
 
 # turn:
