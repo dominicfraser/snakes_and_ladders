@@ -1,9 +1,9 @@
 class GameEngine
 
-  attr_reader 
+  attr_reader :players, :board, :die
 
   def initialize(board, die)
-    @player = []
+    @players = []
     @board = board
     @die = die
   end
@@ -20,14 +20,16 @@ class GameEngine
     position >= 100 ? true : false
   end
 
+  def populate_with_player(player)
+    @players << player
+  end
 
 end
 
 
-# greet // end 
 # populate players
 # turn 
-# win
+
 # switch players
 
 
