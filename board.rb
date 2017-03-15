@@ -12,9 +12,9 @@ class Board
     @ladders_locations[ladder.start] = ladder.finish
   end
 
-
-
-  #add_snake
+  def add_snake(snake)
+    @snakes_locations[snake.start] = snake.finish
+  end
 
 end
 

@@ -26,5 +26,9 @@ class TestBoard < MiniTest::Test
     assert_equal({4 => 14}, @board1.ladders_locations)
   end
 
+  def test_can_add_snake_to_snake_locations
+    @board1.add_snake(@snake1)
+    assert_equal({17 => 7}, @board1.snakes_locations)
+  end
 
 end
