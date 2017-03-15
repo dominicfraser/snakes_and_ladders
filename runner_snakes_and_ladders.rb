@@ -22,6 +22,9 @@ require_relative "game"
 
 @game1.greet()
 
-#turn()
+@game1.turn()
 
 @game1.end_message()
+
+puts @game1.current_player
+
