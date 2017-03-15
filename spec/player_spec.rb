@@ -1,8 +1,6 @@
 require "require_all"
 require ("minitest/autorun")
 require ("minitest/rg")
-# Dir["../*.rb"].each {|file| require file }
-# ONLY WORKS IF IN CORRECT STARTING DIR IN TERMINAL
 require_relative "../player"
 require_relative "../die"
 

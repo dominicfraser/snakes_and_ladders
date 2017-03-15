@@ -1,6 +1,7 @@
 class Player
 
   attr_reader :name, :position
+  
 
   def initialize(name)
     @name = name
@@ -13,6 +14,6 @@ class Player
 
   def move(by_amount)
     @position += by_amount
-    @position < 0 ? @position = 0 : nil
+    if @position < 0 then @position = 0 end
   end
 end
