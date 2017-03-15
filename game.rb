@@ -1,11 +1,13 @@
 class GameEngine
 
-  attr_reader :players, :board, :die
+  attr_reader :players, :board, :die 
+  attr_accessor :current_player
 
   def initialize(board, die)
     @players = []
     @board = board
     @die = die
+    @current_player = ""
   end
 
   def greet()
@@ -24,10 +26,20 @@ class GameEngine
     @players << player
   end
 
+  def switch_players()
+    current_player_index = @players.index(@current_player)
+    if current_player_index == @players.length
+      @current_player = @players[0]
+    else
+      new_player_index = current_player_index + 1
+      @current_player = @players[new_player_index]
+    end
+  end
+
+
 end
 
 
-# populate players
 # turn 
 
 # switch players
