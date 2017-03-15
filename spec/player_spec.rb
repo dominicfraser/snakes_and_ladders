@@ -34,4 +34,9 @@ class TestPlayer < MiniTest::Test
     assert_equal(0, @player1.position)
   end
 
+  def test_move_again
+    @player1.move_again(14)
+    assert_equal(14, @player1.position)
+  end
+
 end

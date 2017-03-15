@@ -8,9 +8,13 @@ class Board
     @snakes_locations = {}
   end
 
-  def move_again(finish, player)
-    player.position = finish
+  def add_ladder(ladder)
+    @ladders_locations[ladder.start] = ladder.finish
   end
+
+
+
+  #add_snake
 
 end
 
@@ -20,7 +24,3 @@ end
 
 
 
-# def move(by_amount)
-#   @position += by_amount
-#   if @position < 0 then @position = 0 end
-# end
