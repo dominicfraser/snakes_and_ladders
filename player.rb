@@ -25,6 +25,9 @@ class Player
     board.ladders_locations.include?(@position) 
   end
 
+  def on_snake?(board)
+    board.snakes_locations.include?(@position)
+  end
 
 end
 
