@@ -1,11 +1,9 @@
 class Ladder
-  attr_reader
+  attr_reader :start, :finish
 
   def initialize(start, finish)
     @start = start
     @finish = finish
   end
-
-  def move_up(position)
 
 end
