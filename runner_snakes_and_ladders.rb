@@ -55,4 +55,10 @@ puts ""
 
 @game1.end_message()
 
+#################
+# Improvements to make:
+# Tidy descriptions, including if player lands on square > 100
+# Logic for if snake ends on square ladder starts and vice versa
+# Some form of visial representation
+# Player input to name their players
 

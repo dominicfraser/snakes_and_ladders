@@ -1,7 +1,6 @@
 class GameEngine
 
-  attr_reader :players, :board, :die, :game_status 
-  attr_accessor :current_player
+  attr_reader :players, :board, :die, :game_status, :current_player
 
   def initialize(board, die)
     @players = []
@@ -62,27 +61,8 @@ class GameEngine
 
   end
 
-
  end
-#snake cannt lead to ladder and v.v.
 
-# turn:
-
-# WHILE game status = not won 
-# player = whoever
-# position = whatever
-# -role dice
-# -move (updates position)
-#   -if position = won? == true
-#     then return game status = won
-#   elsif  position = ladder.start hash
-#     then move again
-#   elsif position = snake.start hash
-#     then move again
-#   else 
-#     position = position
-#   end
-# - change player 
 
  
 
