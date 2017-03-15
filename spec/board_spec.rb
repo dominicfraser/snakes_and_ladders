@@ -1,6 +1,10 @@
 require ("minitest/autorun")
 require ("minitest/rg")
-Dir["../*.rb"].each {|file| require file }
+#Dir["../*.rb"].each {|file| require file }
+require_relative "../player"
+require_relative "../die"
+require_relative "../board"
+
 
 class TestBoard < MiniTest::Test 
 

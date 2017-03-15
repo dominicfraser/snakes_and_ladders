@@ -6,6 +6,6 @@ class Ladder
     @finish = finish
   end
 
-
+  def move_up(position)
 
 end

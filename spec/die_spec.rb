@@ -1,7 +1,9 @@
 require ("minitest/autorun")
 require ("minitest/rg")
-Dir["../*.rb"].each {|file| require file }
+#Dir["../*.rb"].each {|file| require file }
 #ONLY WORKS IF IN CORRECT STARTING DIR IN TERMINAL
+require_relative "../die"
+
 
 class TestDice < MiniTest::Test 
 
