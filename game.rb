@@ -16,6 +16,10 @@ class GameEngine
     puts "Bye!"
   end
 
+  def won?(position)
+    position >= 100 ? true : false
+  end
+
 
 end
 
@@ -33,8 +37,8 @@ end
 # player = whoever
 # position = whatever
 # -role dice
-# -move
-#   -if position = winning 
+# -move (updates position)
+#   -if position = won? == true
 #     then return game status = won
 #   elsif  position = ladder.start hash
 #     then move again
