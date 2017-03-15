@@ -51,7 +51,9 @@ class GameEngine
       elsif @current_player.on_ladder?(@board) == true
         @current_player.move_again(@board.ladders_locations[@current_player.position])
         puts "#{@current_player.name} finds a ladder and climbs to square #{current_player.position}"
-      elsif 
+      elsif @current_player.on_snake?(@board) == true
+        @current_player.move_again(@board.snakes_locations[@current_player.position])
+        puts "#{@current_player.name} slips on a snake and falls to square #{current_player.position}"
       else
       end
       puts ""
