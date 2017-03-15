@@ -39,23 +39,27 @@ class GameEngine
 
 
 
-#   def turn()
-#     while @game_status != "won"
-#       #current_postion = @current_player.position
-#       move(@current_player.player_roll)
-#       if won?(@current_player.position) == true
-#         @game_status = "won"
-#       elsif @board.ladders_locations.include?(@current_player.position)
-#         @current_player.move_again(@board.ladders_locations[@current_player.position])
-#       elsif #the same for snakes
-#       else
-#         @current_player.position = @current_player.position 
-#       end   
-#     end
-#     switch_players()
-#   end
- end
+  def turn()
+    while @game_status != "won"
+      
+      move(@current_player.player_roll(@die))
 
+      if won?(@current_player.position) == true
+        @game_status = "won"
+      elsif @current_player.on_ladder?(@board) == true
+        @current_player.move_again(@board.ladders_locations[@current_player.position])
+      #elsif #the same for snakes
+      else
+        @current_player.position = @current_player.position 
+      end
+      switch_players()
+    end
+
+  end
+
+
+ end
+#snake cannt lead to ladder and v.v.
 
 # turn:
 

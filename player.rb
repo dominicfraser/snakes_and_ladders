@@ -2,7 +2,6 @@ class Player
 
   attr_reader :name, :position
 
-
   def initialize(name)
     @name = name
     @position = 0
@@ -30,7 +29,3 @@ class Player
   end
 
 end
-
-
-# elsif @board.ladders_locations.include?(@current_player.position)
-# #         @current_player.move_again(@board.ladders_locations[@current_player.position])
