@@ -47,6 +47,7 @@ class GameEngine
 
       if won?(@current_player.position) == true
         @game_status = "won"
+        puts "#{@current_player.name} wins!"
       elsif @current_player.on_ladder?(@board) == true
         @current_player.move_again(@board.ladders_locations[@current_player.position])
       #elsif #the same for snakes
