@@ -43,17 +43,18 @@ class GameEngine
     while @game_status != "won"
       this_turns_roll = @current_player.player_roll(@die)
       @current_player.move(this_turns_roll)
-      puts "#{@current_player.name} moves #{this_turns_roll}"
+      puts "#{@current_player.name} moves #{this_turns_roll} to square #{current_player.position}"
 
       if won?(@current_player.position) == true
         @game_status = "won"
         puts "#{@current_player.name} wins!"
       elsif @current_player.on_ladder?(@board) == true
         @current_player.move_again(@board.ladders_locations[@current_player.position])
-      #elsif #the same for snakes
+        puts "#{@current_player.name} finds a ladder and climbs to square #{current_player.position}"
+      elsif 
       else
-        
       end
+      puts ""
       switch_players()
     end
 
