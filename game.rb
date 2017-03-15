@@ -1,10 +1,17 @@
 class GameEngine
 
-  attr_reader
+  attr_reader 
 
-  def initialize()
-
-
+  def initialize(board, die)
+    @player = []
+    @board = board
+    @die = die
   end
+
+
+  
+
+
+  
 
 end
