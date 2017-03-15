@@ -11,7 +11,10 @@ require_relative "../snake"
 class TestGameEngine < MiniTest::Test 
 
   def setup
-
+    @player1 = Player.new("Jake")
+    @board1 = Board.new(100)
+    @ladder1 = Ladder.new(4, 14)
+    @die1 = Die.new(6)
   end
 
 end
